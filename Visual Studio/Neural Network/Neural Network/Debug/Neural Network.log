@@ -1,0 +1,25 @@
+﻿  Neural Network.cpp
+c:\users\vikto\source\repos\neural network\neural network\neural network.cpp(40): warning C4267: 'initializing': conversion from 'size_t' to 'uint16_t', possible loss of data
+c:\users\vikto\source\repos\neural network\neural network\neural network.cpp(233): warning C4244: '=': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+c:\users\vikto\source\repos\neural network\neural network\neural network.cpp(255): warning C4244: '=': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+c:\users\vikto\source\repos\neural network\neural network\neural network.cpp(359): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\vikto\source\repos\neural network\neural network\neural network.cpp(582): warning C4101: 'fptr_last': unreferenced local variable
+c:\users\vikto\source\repos\neural network\neural network\neural network.cpp(585): warning C4101: 'number': unreferenced local variable
+c:\users\vikto\source\repos\neural network\neural network\neural network.cpp(636): warning C4244: '=': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+c:\users\vikto\source\repos\neural network\neural network\neural network.cpp(611): warning C4101: 'fptr_last': unreferenced local variable
+c:\users\vikto\source\repos\neural network\neural network\neural network.cpp(649): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\vikto\source\repos\neural network\neural network\neural network.cpp(674): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\users\vikto\source\repos\neural network\neural network\neural network.cpp(762): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Neural Network.vcxproj -> C:\Users\vikto\source\repos\Neural Network\Debug\Neural Network.exe

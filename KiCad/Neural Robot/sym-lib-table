@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name Neural-Robot-rescue)(type Legacy)(uri "${KIPRJMOD}/Neural Robot-rescue.lib")(options "")(descr ""))
+  (lib (name My-library)(type Legacy)(uri "C:/Users/CyberPunkTECH/Google Drive/KiCAD/Custom library/My library.lib")(options "")(descr ""))
+  (lib (name BLE)(type Legacy)(uri ${KIPRJMOD}/BLE.lib)(options "")(descr ""))
+  (lib (name NeuralRobot-rescue)(type Legacy)(uri ${KIPRJMOD}/NeuralRobot-rescue.lib)(options "")(descr ""))
+)

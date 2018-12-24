@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name Footprint_library)(type KiCad)(uri ${KIPRJMOD}/Footprint_library.pretty)(options "")(descr ""))
+  (lib (name Bluetooth)(type KiCad)(uri ${KIPRJMOD}/Bluetooth.pretty)(options "")(descr ""))
+)
