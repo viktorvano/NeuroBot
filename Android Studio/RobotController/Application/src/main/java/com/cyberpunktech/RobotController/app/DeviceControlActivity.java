@@ -67,10 +67,10 @@ public class DeviceControlActivity extends Activity  implements SensorEventListe
     private SensorManager sensorManager;
     private Sensor accelerometer;
     private long lastUpdate;
-    private static final int PERIOD = 200;
+    private static final int PERIOD = 100;
     private TextView textView;
     private float pitch, roll;
-    private static final float limit = 20.0f;
+    private static final float limit = 16.0f;
 
 
 
@@ -172,19 +172,10 @@ public class DeviceControlActivity extends Activity  implements SensorEventListe
                         + String.valueOf(z) + "\nroll: " + String.valueOf(roll) + "\npitch: " + String.valueOf(pitch));
                 String message = "";
 
-                if(pitch<25.0f && pitch>-25.0f && roll<25.0f && roll>-25.0f)
+                if(pitch<limit && pitch>-limit && roll<limit && roll>-limit)
                 {
                     message="stop\n";
                     StatusButton.setText("STOP");
-                }
-                if(pitch>limit)
-                {
-                    message="backward\n";
-                    StatusButton.setText("BACKWARD");
-                }else if(pitch<-limit)
-                {
-                    message="forward\n";
-                    StatusButton.setText("FORWARD");
                 }else if(roll<-limit)
                 {
                     message="right\n";
@@ -193,9 +184,17 @@ public class DeviceControlActivity extends Activity  implements SensorEventListe
                 {
                     message="left\n";
                     StatusButton.setText("LEFT");
+                }else if(pitch>limit)
+                {
+                    message="backward\n";
+                    StatusButton.setText("BACKWARD");
+                }else if(pitch<-limit)
+                {
+                    message="forward\n";
+                    StatusButton.setText("FORWARD");
                 }
 
-                if (mConnected==true)
+            if (mConnected==true)
                 {
                     sendMessage(message);
                 }

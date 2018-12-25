@@ -350,7 +350,7 @@ void Bluetooth_mode()
 	ssd1306_UpdateScreen();
 	while(!DOWN.released)
 	{
-		HAL_UART_Receive(&huart2, (uint8_t*)buffer, 20, 150);
+		HAL_UART_Receive(&huart2, (uint8_t*)buffer, 20, 75);
 		Message_handler();
 	}
 	buttons_release();
