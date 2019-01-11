@@ -295,7 +295,7 @@ void TIM2_IRQHandler(void)
 
 	  Battery=0.997f*(float)Battery + 0.003f*(float)ADC[0];
 
-		percent=((float)2.0f*Battery*1.931f-3500.0f)/7.0f;
+		percent=((float)Battery*2.0712126f-3500.0f)/6.0f;
 		if(percent>100)
 			percent=100;
 		if(percent<=0)

@@ -1050,8 +1050,11 @@ void start_NN()
 	load_topology();
 	if (Topology.size() < 3)
 	{
+		buttons_release();
 		display_message("Topology", "small size", "ERROR!");//cout << endl << "Topology ERROR:\nTopology is too short, may miss some layer.\n" << endl;
 		//return -10;
+		while(!OK.released && !UP.released && !DOWN.released && !POWER.released);
+		NeuroBot_sleep();
 	}
 	NeuralNetwork myNet(Topology);
 
@@ -1130,6 +1133,10 @@ void start_NN()
 		}
 		servoX(0.5f);
 		//showVectorValues(": Inputs:", input);
+		if(OK.released || UP.released || DOWN.released || POWER.released)
+		{
+			break;
+		}
 		myNet.feedForward(input);
 
 		// Collect the net's actual results:

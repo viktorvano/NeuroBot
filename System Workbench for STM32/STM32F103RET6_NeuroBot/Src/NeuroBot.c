@@ -93,7 +93,7 @@ void NeuroBot_init()
 		ssd1306_SetCursor(2, 26);
 		ssd1306_WriteString("Insert SD", Font_11x18, White);
 		ssd1306_SetCursor(2, 26+18);
-		ssd1306_WriteString("Press OK to turn OFF.", Font_7x10, White);
+		ssd1306_WriteString("Press OK to OFF.", Font_7x10, White);
 		ssd1306_UpdateScreen();
 		while(!OK.released);
 		NeuroBot_sleep();
@@ -424,8 +424,13 @@ void menu_manager()
 		redraw=1;
 	}
 
-	if(percent!=percent_old)
+	if(percent!=percent_old
+	|| !HAL_GPIO_ReadPin(Battery_Charging_GPIO_Port, Battery_Charging_Pin)
+	|| !HAL_GPIO_ReadPin(Battery_Full_GPIO_Port, Battery_Full_Pin))
 	{
+		if(!HAL_GPIO_ReadPin(Battery_Charging_GPIO_Port, Battery_Charging_Pin)
+		|| !HAL_GPIO_ReadPin(Battery_Full_GPIO_Port, Battery_Full_Pin))
+			percent_old=110;
 		percent_old=percent;
 		redraw=1;
 	}
