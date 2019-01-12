@@ -13,7 +13,8 @@ ButtonStruct OK, UP, DOWN, POWER;
 int iDistance;
 int model=0, revision=0;
 uint8_t menu=0, redraw=1;
-uint32_t ADC[4], Battery=2000;
+uint32_t ADC[4];
+float Battery=4200;
 int percent=100, percent_old;
 FATFS myFAT;
 

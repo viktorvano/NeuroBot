@@ -293,9 +293,9 @@ void TIM2_IRQHandler(void)
 		  motor_stop();
 	  }
 
-	  Battery=0.997f*(float)Battery + 0.003f*(float)ADC[0];
+	  Battery=0.995f*Battery + 0.005f*(float)ADC[0];
 
-		percent=((float)Battery*2.0712126f-3500.0f)/6.300f;
+		percent=((float)Battery*1.769623f-3500.0f)/6.350f;
 		if(percent>100)
 			percent=100;
 		if(percent<=0)

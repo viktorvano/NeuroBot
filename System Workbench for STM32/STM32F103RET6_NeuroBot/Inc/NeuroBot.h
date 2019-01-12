@@ -40,7 +40,8 @@ extern ButtonStruct OK, UP, DOWN, POWER;
 extern int iDistance;
 extern int model, revision;
 extern uint8_t menu, redraw;
-extern uint32_t ADC[4], Battery;
+extern uint32_t ADC[4];
+extern float Battery;
 extern int percent, percent_old;
 extern FATFS myFAT;
 
