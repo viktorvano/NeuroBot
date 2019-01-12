@@ -14,7 +14,7 @@ int iDistance;
 int model=0, revision=0;
 uint8_t menu=0, redraw=1;
 uint32_t ADC[4];
-float Battery=4200;
+float Battery=2116;
 int percent=100, percent_old;
 FATFS myFAT;
 
