@@ -17,6 +17,7 @@ uint32_t ADC[4];
 float Battery=2116;
 int percent=100, percent_old;
 FATFS myFAT;
+uint16_t connection_cnt=1000;
 
 void NeuroBot_init()
 {
@@ -289,8 +290,11 @@ void motor_direction(float left, float right)
 
 	if((right>=0.5f && left>=0.5f) || (right<0.5f && left<0.5f))
 	{
-		HAL_Delay(800);
+		HAL_Delay(201);
+		HAL_Delay(rand()%400);//HAL_Delay(800);
 	}
+	HAL_Delay(101);//HAL_Delay(200);
+	HAL_Delay(rand()%300);
 }
 
 void GPIO_POWER_Init(void)
@@ -351,7 +355,20 @@ void Bluetooth_mode()
 	ssd1306_UpdateScreen();
 	while(!DOWN.released)
 	{
+		memset(buffer, 0, 20);
 		HAL_UART_Receive(&huart2, (uint8_t*)buffer, 20, 75);
+
+		if(strlen(buffer)==0)
+			connection_cnt++;
+		else
+			connection_cnt=0;
+
+		if(connection_cnt>5)
+			motor_stop();
+
+		if(connection_cnt>30)
+			connection_cnt=30;
+
 		Message_handler();
 	}
 	buttons_release();

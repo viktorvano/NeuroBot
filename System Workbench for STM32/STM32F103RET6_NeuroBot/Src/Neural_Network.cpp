@@ -1143,7 +1143,6 @@ void start_NN()
 		myNet.getResults(result);
 		motor_direction(result[0], result[1]);
 		//showVectorValues("Outputs: ", result);
-		HAL_Delay(200);
 		//Sleep(1000);
 		if(OK.released || UP.released || DOWN.released || POWER.released)
 		{

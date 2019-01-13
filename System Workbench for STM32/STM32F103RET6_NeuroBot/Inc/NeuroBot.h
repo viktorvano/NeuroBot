@@ -44,6 +44,7 @@ extern uint32_t ADC[4];
 extern float Battery;
 extern int percent, percent_old;
 extern FATFS myFAT;
+extern uint16_t connection_cnt;
 
 extern void NeuroBot_init();
 extern void servoY(float value);
