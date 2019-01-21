@@ -12,12 +12,12 @@ char buffer[50];
 ButtonStruct OK, UP, DOWN, POWER;
 int iDistance;
 int model=0, revision=0;
-uint8_t menu=0, redraw=1;
+uint8_t menu=0, redraw=1, cnt_flag=0;
 uint32_t ADC[4];
 float Battery=2116;
 int percent=100, percent_old;
 FATFS myFAT;
-uint16_t connection_cnt=1000;
+uint16_t connection_cnt=1000, cnt_20ms=250;
 
 void NeuroBot_init()
 {
@@ -252,6 +252,8 @@ void motorB_stop()
 
 void motor_direction(float left, float right)
 {
+	servoY(1.0f);
+	HAL_Delay(500);
 	if(left<0.0f)
 	{
 		left=0.0f;
@@ -290,11 +292,32 @@ void motor_direction(float left, float right)
 
 	if((right>=0.5f && left>=0.5f) || (right<0.5f && left<0.5f))
 	{
-		HAL_Delay(201);
-		HAL_Delay(rand()%400);//HAL_Delay(800);
+		cnt_20ms=0;
+		cnt_flag=1;
+		uint16_t waiting_time=400/20+rand()%(400/20);
+		while(waiting_time>cnt_20ms)
+		{
+			if(measure_distance()>(90.0f/2000.0f))
+			{
+				motorA_backward();
+				motorB_backward();
+				HAL_Delay(500);
+				motorA_forward();
+				motorB_backward();
+				HAL_Delay(1500);
+				motor_stop();
+				break;
+			}
+		}
+		cnt_flag=0;
+		cnt_20ms=0;
 	}
-	HAL_Delay(101);//HAL_Delay(200);
-	HAL_Delay(rand()%300);
+	else
+	{
+		HAL_Delay(101);//HAL_Delay(200);
+		HAL_Delay(rand()%300);
+	}
+	servoY(0.0f);
 }
 
 void GPIO_POWER_Init(void)

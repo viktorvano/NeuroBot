@@ -39,12 +39,12 @@ extern char buffer[50];
 extern ButtonStruct OK, UP, DOWN, POWER;
 extern int iDistance;
 extern int model, revision;
-extern uint8_t menu, redraw;
+extern uint8_t menu, redraw, cnt_flag;
 extern uint32_t ADC[4];
 extern float Battery;
 extern int percent, percent_old;
 extern FATFS myFAT;
-extern uint16_t connection_cnt;
+extern uint16_t connection_cnt, cnt_20ms;
 
 extern void NeuroBot_init();
 extern void servoY(float value);

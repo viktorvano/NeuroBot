@@ -300,6 +300,9 @@ void TIM2_IRQHandler(void)
 			percent=100;
 		if(percent<=0)
 			NeuroBot_sleep();
+
+		if(cnt_flag==1 && cnt_20ms<250)
+			cnt_20ms++;
   /* USER CODE END TIM2_IRQn 0 */
   HAL_TIM_IRQHandler(&htim2);
   /* USER CODE BEGIN TIM2_IRQn 1 */
