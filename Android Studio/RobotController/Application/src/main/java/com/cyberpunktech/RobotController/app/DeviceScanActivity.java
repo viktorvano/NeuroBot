@@ -16,6 +16,7 @@
 
 package com.cyberpunktech.RobotController.app;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.ListActivity;
 import android.bluetooth.BluetoothAdapter;
@@ -26,6 +27,9 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -76,6 +80,22 @@ public class DeviceScanActivity extends ListActivity {
             finish();
             return;
         }
+
+        checkCoarseLocationPermission();
+    }
+
+    private boolean checkCoarseLocationPermission()
+    {
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+        {
+            Log.i("checkCoarseLocation: ", "Has to request permissions to ACCESS_COARSE_LOCATION");
+            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
+            return false;
+        }else
+        {
+            Log.i("checkCoarseLocation: ", "ACCESS_COARSE_LOCATION is already GRANTED");
+            return true;
+        }
     }
 
     @Override
@@ -124,7 +144,7 @@ public class DeviceScanActivity extends ListActivity {
         // Initializes list view adapter.
         mLeDeviceListAdapter = new LeDeviceListAdapter();
         setListAdapter(mLeDeviceListAdapter);
-        scanLeDevice(true);
+        scanLeDevice(false);//true
     }
 
     @Override
@@ -233,8 +253,12 @@ public class DeviceScanActivity extends ListActivity {
                 viewHolder = (ViewHolder) view.getTag();
             }
 
-            BluetoothDevice device = mLeDevices.get(i);
-            final String deviceName = device.getName();
+            BluetoothDevice device;
+            final String deviceName;
+
+            device = mLeDevices.get(i);
+            deviceName = device.getName();
+
             if (deviceName != null && deviceName.length() > 0)
                 viewHolder.deviceName.setText(deviceName);
             else
@@ -246,24 +270,57 @@ public class DeviceScanActivity extends ListActivity {
     }
 
     // Device scan callback.
-    private BluetoothAdapter.LeScanCallback mLeScanCallback =
-            new BluetoothAdapter.LeScanCallback() {
+    private BluetoothAdapter.LeScanCallback mLeScanCallback;
 
-        @Override
-        public void onLeScan(final BluetoothDevice device, int rssi, byte[] scanRecord) {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    mLeDeviceListAdapter.addDevice(device);
-                    mLeDeviceListAdapter.notifyDataSetChanged();
-                }
-            });
-        }
-    };
+    {
+        mLeScanCallback = new BluetoothAdapter.LeScanCallback() {
+
+            @Override
+            public void onLeScan(final BluetoothDevice device, int rssi, byte[] scanRecord) {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        final String deviceName = device.getName();
+                        boolean condition;
+
+                        try
+                        {
+                            condition=deviceName.equals("JDY-08");
+                        }
+                        catch(NullPointerException e)
+                        {
+                            condition=false;
+                        }
+                        if (condition) {
+                            autoConnect(device);
+                        } else {
+                            mLeDeviceListAdapter.addDevice(device);
+                            mLeDeviceListAdapter.notifyDataSetChanged();
+                        }
+
+                    }
+                });
+            }
+        };
+    }
 
     static class ViewHolder {
         TextView deviceName;
         TextView deviceAddress;
     }
 
+    private void autoConnect(BluetoothDevice device)
+    {
+        mScanning = false;
+        mBluetoothAdapter.stopLeScan(mLeScanCallback);
+        if (device == null) return;
+        final Intent intent = new Intent(this, DeviceControlActivity.class);
+        intent.putExtra(DeviceControlActivity.EXTRAS_DEVICE_NAME, device.getName());
+        intent.putExtra(DeviceControlActivity.EXTRAS_DEVICE_ADDRESS, device.getAddress());
+        if (mScanning) {
+            mBluetoothAdapter.stopLeScan(mLeScanCallback);
+            mScanning = false;
+        }
+        startActivity(intent);
+    }
 }

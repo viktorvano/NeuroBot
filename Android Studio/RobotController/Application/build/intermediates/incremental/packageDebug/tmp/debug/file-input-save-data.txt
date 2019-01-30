@@ -1,7 +1,7 @@
 #Internal package file, do not edit.
-#Mon Dec 24 12:18:00 CET 2018
+#Wed Jan 30 17:05:14 CET 2019
 0.baseType=DIRECTORY
-0.base=D\:\\Google Drive\\AndroidStudioProjects\\RobotController\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.base=D\:\\Google Drive\\AndroidStudioProjects\\RobotController\\Application\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
 0.path=classes.dex
 0.set=DEX
 count=1

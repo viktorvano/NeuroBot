@@ -1,0 +1,4 @@
+#Wed Jan 30 16:45:00 CET 2019
+base.0=D\:\\Google Drive\\AndroidStudioProjects\\RobotController\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+path.0=classes.dex
+renamed.0=classes.dex

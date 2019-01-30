@@ -1,0 +1,1 @@
+[{"outputType":{"type":"INSTANT_APP_MANIFEST"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":6,"versionName":"1.5","enabled":true,"outputFile":"Application-debug.apk","fullName":"debug","baseName":"debug"},"path":"AndroidManifest.xml","properties":{"packageId":"com.cyberpunktech.RobotController.app","split":"","minSdkVersion":"18"}}]

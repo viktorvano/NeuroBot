@@ -297,7 +297,7 @@ public class BluetoothLeService extends Service {
             mBluetoothGatt.writeCharacteristic(charac);
         }catch (IllegalStateException | NullPointerException e)
         {
-            Log.e(TAG, "Zle ZARIADENIE, nema sluzbu od ON semi, nie je charakteristika 0000fee1-0000-1000-8000-00805f9b34fb");
+            Log.e(TAG, "Wrong device, does not contain service/characteristic 0000fee1-0000-1000-8000-00805f9b34fb");
             Context context = getApplicationContext();
             //CharSequence text = "Send ERROR";
             int duration = Toast.LENGTH_SHORT;
