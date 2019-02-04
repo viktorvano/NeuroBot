@@ -126,7 +126,7 @@ void servoX(float value)
 {
 	if(value<=0.0f)
 		value=0.0f;
-	__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, 35+(value*80.0f));
+	__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, 33+(value*80.0f));
 }
 
 float measure_distance()
