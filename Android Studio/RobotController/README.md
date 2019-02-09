@@ -28,15 +28,6 @@ Pre-requisites
 - Android Min Sdk Version: API 18
 - Android Support Repository
 
-Screenshots
--------------
-
-<img src="screenshots/IMG_20170728_152031.jpg" height="400" alt="Screenshot"/> <img src="screenshots/IMG_Screenshot_2017-07-28-15-23-08.jpeg" height="400" alt="Screenshot"/>
-
-
-<img src="screenshots/prj_strctr.png" height="400" alt="Screenshot"/> <img src="screenshots/prj_strctr1.PNG" height="400" alt="Screenshot"/>
-
-<img src="screenshots/prj_strctr2.PNG" height="400" alt="Screenshot"/> <img src="screenshots/prj_strctr3.PNG" height="400" alt="Screenshot"/>
 
 Getting Started
 ---------------
