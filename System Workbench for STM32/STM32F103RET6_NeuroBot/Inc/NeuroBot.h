@@ -72,4 +72,6 @@ extern void display_manager();
 extern void display_battery();
 extern void display_message(const char *line_1, const char *line_2, const char *line_3);
 
+extern void START_THE_NN();
+
 #endif /* NEUROBOT_H_ */

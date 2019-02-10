@@ -14,7 +14,7 @@ int iDistance;
 int model=0, revision=0;
 uint8_t menu=0, redraw=1, cnt_flag=0;
 uint32_t ADC[4];
-float Battery=2116;
+float Battery=2500;
 int percent=100, percent_old;
 FATFS myFAT;
 uint16_t connection_cnt=1000, cnt_20ms=250;
@@ -441,7 +441,7 @@ void menu_manager()
 	if(menu==0 && OK.released)
 	{
 		buttons_release();
-		START_THE_NN();//menu=3;
+		START_THE_NN();
 		redraw=1;
 	}else
 
