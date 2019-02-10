@@ -6,6 +6,8 @@ Training Data are in "training.txt".
 
 Topology is in "topology.txt".
 
+Demon video: https://www.youtube.com/watch?v=UL9_z_reCno
+
 Android App: https://play.google.com/store/apps/details?id=com.cyberpunktech.RobotController.app
 
 If the content of "weights.txt" file is deleted, neural network automatically retrain itself again.
