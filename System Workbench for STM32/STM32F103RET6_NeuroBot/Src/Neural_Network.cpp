@@ -37,15 +37,6 @@ vector< vector<float> > LearningOutputs;
 vector<float> Weights;
 uint16_t NeuronIndex = 0;
 
-
-void start_NN();
-extern "C" void START_THE_NN();
-
-void START_THE_NN()
-{
-	start_NN();
-}
-
 void push_zeros_to_Weights()
 {
 	vector <float> InputRow;

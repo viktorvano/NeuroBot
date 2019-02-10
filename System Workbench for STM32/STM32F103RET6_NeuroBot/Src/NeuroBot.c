@@ -441,7 +441,7 @@ void menu_manager()
 	if(menu==0 && OK.released)
 	{
 		buttons_release();
-		START_THE_NN();
+		start_NN();
 		redraw=1;
 	}else
 
