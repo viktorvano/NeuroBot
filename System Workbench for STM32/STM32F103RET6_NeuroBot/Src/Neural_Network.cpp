@@ -576,7 +576,7 @@ public:
 	void setOutputValue(float value) { m_outputValue = value; }
 	float getOutputValue(void) const { return m_outputValue; }
 	void feedForward(const Layer &prevLayer);
-	void calcOutputGradients(float targerValue);
+	void calcOutputGradients(float targetValue);
 	void calcHiddenGradients(const Layer &nextLayer);
 	void updateInputWeights(Layer &prevLayer);
 	void saveInputWeights(Layer &prevLayer);
@@ -621,9 +621,9 @@ void Neuron::feedForward(const Layer &prevLayer)
 	m_outputValue = Neuron::transferFunction(sum);
 }
 
-void Neuron::calcOutputGradients(float targerValue)
+void Neuron::calcOutputGradients(float targetValue)
 {
-	float delta = targerValue - m_outputValue;
+	float delta = targetValue - m_outputValue;
 	m_gradient = delta * Neuron::transferFunctionDerivative(m_outputValue);
 }
 
