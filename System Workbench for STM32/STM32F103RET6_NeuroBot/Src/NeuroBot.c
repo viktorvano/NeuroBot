@@ -292,9 +292,14 @@ void motor_direction(float left, float right)
 
 	if((right>=0.5f && left>=0.5f) || (right<0.5f && left<0.5f))
 	{
+		float average=(right+left)*0.5f;
+		if(average>=0.5f)
+		{
+			average-=0.5f;
+		}//average 0 .. 0.5
 		cnt_20ms=0;
 		cnt_flag=1;
-		uint16_t waiting_time=400/20+rand()%(400/20);
+		uint16_t waiting_time=80.0f*average;
 		while(waiting_time>cnt_20ms)
 		{
 			if(measure_distance()>(90.0f/2000.0f))
@@ -314,8 +319,19 @@ void motor_direction(float left, float right)
 	}
 	else
 	{
-		HAL_Delay(101);//HAL_Delay(200);
-		HAL_Delay(rand()%300);
+		float average, avg_right, avg_left;
+		if(left<0.5f)
+			avg_left=left;
+		else
+			avg_left=left-0.5f;
+
+		if(right<0.5f)
+			avg_right=right;
+		else
+			avg_right=right-0.5f;
+
+		average=(avg_left+avg_right)*0.5f;//average 0 .. 0.5
+		HAL_Delay(700.0f*average);
 	}
 	servoY(0.0f);
 }
