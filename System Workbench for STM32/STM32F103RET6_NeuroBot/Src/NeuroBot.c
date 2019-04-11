@@ -299,7 +299,7 @@ void motor_direction(float left, float right)
 		}//average 0 .. 0.5
 		cnt_20ms=0;
 		cnt_flag=1;
-		uint16_t waiting_time=80.0f*average;
+		uint16_t waiting_time=80.0f*average + 10;// 200...1000ms
 		while(waiting_time>cnt_20ms)
 		{
 			if(measure_distance()>(90.0f/2000.0f))
@@ -331,7 +331,7 @@ void motor_direction(float left, float right)
 			avg_right=right-0.5f;
 
 		average=(avg_left+avg_right)*0.5f;//average 0 .. 0.5
-		HAL_Delay(700.0f*average);
+		HAL_Delay(700.0f*average + 200);//200...550ms
 	}
 	servoY(0.0f);
 }
