@@ -212,6 +212,7 @@ void motor_stop()
 	  HAL_GPIO_WritePin(Motor_A2_GPIO_Port, Motor_A2_Pin, 0);
 	  HAL_GPIO_WritePin(Motor_B1_GPIO_Port, Motor_B1_Pin, 0);
 	  HAL_GPIO_WritePin(Motor_B2_GPIO_Port, Motor_B2_Pin, 0);
+	  overheat_check();
 }
 
 void motorA_forward()

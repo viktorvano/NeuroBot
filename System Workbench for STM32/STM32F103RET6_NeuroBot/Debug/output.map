@@ -18258,79 +18258,79 @@ LOAD d:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17
                 0x08012ba8       0xac Src/NeuroBot.o
                 0x08012ba8                overheat_check
  .text.motor_stop
-                0x08012c54       0x38 Src/NeuroBot.o
+                0x08012c54       0x3c Src/NeuroBot.o
                 0x08012c54                motor_stop
  .text.motorA_forward
-                0x08012c8c       0x24 Src/NeuroBot.o
-                0x08012c8c                motorA_forward
+                0x08012c90       0x24 Src/NeuroBot.o
+                0x08012c90                motorA_forward
  .text.motorA_backward
-                0x08012cb0       0x24 Src/NeuroBot.o
-                0x08012cb0                motorA_backward
+                0x08012cb4       0x24 Src/NeuroBot.o
+                0x08012cb4                motorA_backward
  .text.motorB_forward
-                0x08012cd4       0x20 Src/NeuroBot.o
-                0x08012cd4                motorB_forward
+                0x08012cd8       0x20 Src/NeuroBot.o
+                0x08012cd8                motorB_forward
  .text.motorB_backward
-                0x08012cf4       0x20 Src/NeuroBot.o
-                0x08012cf4                motorB_backward
+                0x08012cf8       0x20 Src/NeuroBot.o
+                0x08012cf8                motorB_backward
  .text.motor_direction
-                0x08012d14      0x270 Src/NeuroBot.o
-                0x08012d14                motor_direction
+                0x08012d18      0x270 Src/NeuroBot.o
+                0x08012d18                motor_direction
  .text.GPIO_POWER_Init
-                0x08012f84       0x30 Src/NeuroBot.o
-                0x08012f84                GPIO_POWER_Init
+                0x08012f88       0x30 Src/NeuroBot.o
+                0x08012f88                GPIO_POWER_Init
  .text.GPIO_POWER_DeInit
-                0x08012fb4       0x14 Src/NeuroBot.o
-                0x08012fb4                GPIO_POWER_DeInit
+                0x08012fb8       0x14 Src/NeuroBot.o
+                0x08012fb8                GPIO_POWER_DeInit
  .text.NeuroBot_sleep
-                0x08012fc8       0x60 Src/NeuroBot.o
-                0x08012fc8                NeuroBot_sleep
+                0x08012fcc       0x60 Src/NeuroBot.o
+                0x08012fcc                NeuroBot_sleep
  .text.USB_mode
-                0x08013028       0x94 Src/NeuroBot.o
-                0x08013028                USB_mode
+                0x0801302c       0x94 Src/NeuroBot.o
+                0x0801302c                USB_mode
  .text.Bluetooth_mode
-                0x080130bc      0x108 Src/NeuroBot.o
-                0x080130bc                Bluetooth_mode
+                0x080130c0      0x108 Src/NeuroBot.o
+                0x080130c0                Bluetooth_mode
  .text.buttons_release
-                0x080131c4       0x48 Src/NeuroBot.o
-                0x080131c4                buttons_release
+                0x080131c8       0x48 Src/NeuroBot.o
+                0x080131c8                buttons_release
  .text.menu_manager
-                0x0801320c      0x1d8 Src/NeuroBot.o
-                0x0801320c                menu_manager
+                0x08013210      0x1d8 Src/NeuroBot.o
+                0x08013210                menu_manager
  .text.display_manager
-                0x080133e4      0x178 Src/NeuroBot.o
-                0x080133e4                display_manager
+                0x080133e8      0x178 Src/NeuroBot.o
+                0x080133e8                display_manager
  .text.display_battery
-                0x0801355c      0x11c Src/NeuroBot.o
-                0x0801355c                display_battery
+                0x08013560      0x11c Src/NeuroBot.o
+                0x08013560                display_battery
  .text.display_message
-                0x08013678       0x60 Src/NeuroBot.o
-                0x08013678                display_message
+                0x0801367c       0x60 Src/NeuroBot.o
+                0x0801367c                display_message
  .text.BSP_SD_Init
-                0x080136d8       0x58 Src/bsp_driver_sd.o
-                0x080136d8                BSP_SD_Init
+                0x080136dc       0x58 Src/bsp_driver_sd.o
+                0x080136dc                BSP_SD_Init
  .text.BSP_SD_ReadBlocks
-                0x08013730       0x40 Src/bsp_driver_sd.o
-                0x08013730                BSP_SD_ReadBlocks
+                0x08013734       0x40 Src/bsp_driver_sd.o
+                0x08013734                BSP_SD_ReadBlocks
  .text.BSP_SD_WriteBlocks
-                0x08013770       0x40 Src/bsp_driver_sd.o
-                0x08013770                BSP_SD_WriteBlocks
+                0x08013774       0x40 Src/bsp_driver_sd.o
+                0x08013774                BSP_SD_WriteBlocks
  .text.BSP_SD_GetStatus
-                0x080137b0       0x14 Src/bsp_driver_sd.o
-                0x080137b0                BSP_SD_GetStatus
+                0x080137b4       0x14 Src/bsp_driver_sd.o
+                0x080137b4                BSP_SD_GetStatus
  .text.BSP_SD_GetCardInfo
-                0x080137c4       0x1c Src/bsp_driver_sd.o
-                0x080137c4                BSP_SD_GetCardInfo
+                0x080137c8       0x1c Src/bsp_driver_sd.o
+                0x080137c8                BSP_SD_GetCardInfo
  .text.BSP_SD_IsDetected
-                0x080137e0       0x18 Src/bsp_driver_sd.o
-                0x080137e0                BSP_SD_IsDetected
+                0x080137e4       0x18 Src/bsp_driver_sd.o
+                0x080137e4                BSP_SD_IsDetected
  .text.MX_FATFS_Init
-                0x080137f8       0x24 Src/fatfs.o
-                0x080137f8                MX_FATFS_Init
+                0x080137fc       0x24 Src/fatfs.o
+                0x080137fc                MX_FATFS_Init
  .text.get_fattime
-                0x0801381c        0xe Src/fatfs.o
-                0x0801381c                get_fattime
- .text.main     0x0801382a       0x46 Src/main.o
-                0x0801382a                main
+                0x08013820        0xe Src/fatfs.o
+                0x08013820                get_fattime
+ .text.main     0x0801382e       0x42 Src/main.o
+                0x0801382e                main
  .text.SystemClock_Config
                 0x08013870       0xcc Src/main.o
                 0x08013870                SystemClock_Config
@@ -26349,7 +26349,7 @@ OUTPUT(STM32F103RET6_NeuroBot.elf elf32-littlearm)
  .debug_macro   0x00029176      0x438 Src/usbd_desc.o
  .debug_macro   0x000295ae      0x44b Src/usbd_storage_if.o
 
-.debug_line     0x00000000    0x26ee0
+.debug_line     0x00000000    0x26ed7
  .debug_line    0x00000000      0xa3d Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
  .debug_line    0x00000a3d      0xeca Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o
  .debug_line    0x00001907      0xcee Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o
@@ -26382,21 +26382,21 @@ OUTPUT(STM32F103RET6_NeuroBot.elf elf32-littlearm)
  .debug_line    0x000197bb      0x980 Middlewares/Third_Party/FatFs/src/ff_gen_drv.o
  .debug_line    0x0001a13b      0xa31 Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.o
  .debug_line    0x0001ab6c     0x2ac9 Src/Neural_Network.o
- .debug_line    0x0001d635      0xedd Src/NeuroBot.o
- .debug_line    0x0001e512      0x9e6 Src/bsp_driver_sd.o
- .debug_line    0x0001eef8      0x9fc Src/fatfs.o
- .debug_line    0x0001f8f4      0xcb0 Src/main.o
- .debug_line    0x000205a4      0xc58 Src/ssd1306.o
- .debug_line    0x000211fc      0x313 Src/ssd1306_fonts.o
- .debug_line    0x0002150f      0xa13 Src/stm32f1xx_hal_msp.o
- .debug_line    0x00021f22      0xc91 Src/stm32f1xx_it.o
- .debug_line    0x00022bb3      0x8f9 Src/system_stm32f1xx.o
- .debug_line    0x000234ac      0xc67 Src/tof.o
- .debug_line    0x00024113      0xaad Src/usb_device.o
- .debug_line    0x00024bc0      0xd4c Src/usbd_conf.o
- .debug_line    0x0002590c      0xa55 Src/usbd_desc.o
- .debug_line    0x00026361      0xb02 Src/usbd_storage_if.o
- .debug_line    0x00026e63       0x7d startup/startup_stm32f103xe.o
+ .debug_line    0x0001d635      0xede Src/NeuroBot.o
+ .debug_line    0x0001e513      0x9e6 Src/bsp_driver_sd.o
+ .debug_line    0x0001eef9      0x9fc Src/fatfs.o
+ .debug_line    0x0001f8f5      0xca6 Src/main.o
+ .debug_line    0x0002059b      0xc58 Src/ssd1306.o
+ .debug_line    0x000211f3      0x313 Src/ssd1306_fonts.o
+ .debug_line    0x00021506      0xa13 Src/stm32f1xx_hal_msp.o
+ .debug_line    0x00021f19      0xc91 Src/stm32f1xx_it.o
+ .debug_line    0x00022baa      0x8f9 Src/system_stm32f1xx.o
+ .debug_line    0x000234a3      0xc67 Src/tof.o
+ .debug_line    0x0002410a      0xaad Src/usb_device.o
+ .debug_line    0x00024bb7      0xd4c Src/usbd_conf.o
+ .debug_line    0x00025903      0xa55 Src/usbd_desc.o
+ .debug_line    0x00026358      0xb02 Src/usbd_storage_if.o
+ .debug_line    0x00026e5a       0x7d startup/startup_stm32f103xe.o
 
 .debug_str      0x00000000    0xcdb34
  .debug_str     0x00000000    0xa324a Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o

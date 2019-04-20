@@ -148,7 +148,6 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
 	menu_manager();
-	overheat_check();
   }
   /* USER CODE END 3 */
 
