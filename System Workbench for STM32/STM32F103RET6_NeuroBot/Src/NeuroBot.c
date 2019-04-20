@@ -255,41 +255,28 @@ void motor_direction(float left, float right)
 {
 	servoY(1.0f);
 	HAL_Delay(500);
+
 	if(left<0.0f)
-	{
 		left=0.0f;
-	}else
+	else
 	if(left>1.0f)
-	{
 		left=1.0f;
-	}
 
 	if(right<0.0f)
-	{
 		right=0.0f;
-	}else
+	else
 	if(right>1.0f)
-	{
 		right=1.0f;
-	}
 
 	if(left<0.5f)
-	{
 		motorA_backward();
-	}else
-	if(left>=0.5f)
-	{
+	else
 		motorA_forward();
-	}
 
 	if(right<0.5f)
-	{
 		motorB_backward();
-	}else
-	if(right>=0.5f)
-	{
+	else
 		motorB_forward();
-	}
 
 	if((right>=0.5f && left>=0.5f) || (right<0.5f && left<0.5f))
 	{
