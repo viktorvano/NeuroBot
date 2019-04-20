@@ -488,8 +488,9 @@ void menu_manager()
 	{
 		if(!HAL_GPIO_ReadPin(Battery_Charging_GPIO_Port, Battery_Charging_Pin)
 		|| !HAL_GPIO_ReadPin(Battery_Full_GPIO_Port, Battery_Full_Pin))
-			percent_old=110;
-		percent_old=percent;
+			percent_old=210;
+		else
+			percent_old=percent;
 		redraw=1;
 	}
 
