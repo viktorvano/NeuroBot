@@ -278,6 +278,17 @@ void motor_direction(float left, float right)
 	else
 		motorB_forward();
 
+	char msg1[15], msg2[15], msg3[15];
+	memset(msg1, 0, 15);
+	memset(msg2, 0, 15);
+	memset(msg3, 0, 15);
+	strcat(msg1, "Outputs:");
+	strcat(msg2, "L: ");
+	strcat(msg3, "R: ");
+	ftoa(left, msg2, 3);
+	ftoa(right, msg3, 3);
+	display_message(msg1, msg2, msg3);
+
 	if((right>=0.5f && left>=0.5f) || (right<0.5f && left<0.5f))
 	{
 		float average=(right+left)*0.5f;

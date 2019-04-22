@@ -72,6 +72,9 @@ extern void display_manager();
 extern void display_battery();
 extern void display_message(const char *line_1, const char *line_2, const char *line_3);
 
+extern void reverse(char *str, int len);
+extern int intToStr(int x, char str[], int d);
+extern void ftoa(float n, char *res, int afterpoint);
 extern void start_NN();
 
 #endif /* NEUROBOT_H_ */
