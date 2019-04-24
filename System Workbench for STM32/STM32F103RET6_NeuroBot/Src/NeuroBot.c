@@ -285,8 +285,8 @@ void motor_direction(float left, float right)
 	strcat(msg1, "Outputs:");
 	strcat(msg2, "L: ");
 	strcat(msg3, "R: ");
-	ftoa(left, msg2, 3);
-	ftoa(right, msg3, 3);
+	ftoa(left, &msg2[strlen(msg2)], 3);
+	ftoa(right, &msg3[strlen(msg3)], 3);
 	display_message(msg1, msg2, msg3);
 
 	if((right>=0.5f && left>=0.5f) || (right<0.5f && left<0.5f))
