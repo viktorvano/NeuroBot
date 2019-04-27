@@ -10,6 +10,7 @@
 #include <cassert>
 #include <sstream>
 #include <stdio.h>//C library
+#include <chrono>
 
 
 /*************************************************************************************************/
@@ -716,8 +717,8 @@ private:
 NeuralNetwork::NeuralNetwork(const vector<unsigned> &topology)
 {
 	m_error=0;
-	m_recentAverageError=0;
-	m_recentAverageSmoothingFactor=0;
+	m_recentAverageError=10.0;
+	m_recentAverageSmoothingFactor = 0;// PatternCount;
 	unsigned numLayers = topology.size();
 	for (unsigned layerNum = 0; layerNum < numLayers; layerNum++)
 	{
@@ -878,6 +879,7 @@ int main()
 		load_training_data_from_file();
 
 		cout << endl << "Training started\n" << endl;
+		auto start_time = std::chrono::high_resolution_clock::now();
 		while (1)
 		{
 			trainingPass++;
@@ -908,6 +910,9 @@ int main()
 				cout << "Net recent average error: "
 					<< myNet.getRecentAverageError() << endl;
 				cout << "Exit due to low error :D" << endl;
+				auto end_time = std::chrono::high_resolution_clock::now();
+				auto time = end_time - start_time;
+				cout << "Training time: " << time / std::chrono::milliseconds(1) << " ms." << endl;
 				//save weights to a file...
 				myNet.saveNeuronWeights();
 				break;
