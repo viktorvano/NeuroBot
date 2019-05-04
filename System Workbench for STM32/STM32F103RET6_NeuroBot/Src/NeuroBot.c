@@ -329,7 +329,7 @@ void motor_direction(float left, float right)
 
 		float certainty=(right+left)-1.0f;
 
-		HAL_Delay(350.0f*certainty + 200);//200...550ms
+		HAL_Delay(250.0f*certainty + 150);//150...400ms
 	}
 	servoY(0.0f);
 }
