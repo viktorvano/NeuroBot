@@ -1,0 +1,1 @@
+[{"outputType":{"type":"INSTANT_APP_MANIFEST"},"apkData":{"type":"MAIN","splits":[],"versionCode":7,"versionName":"1.6","enabled":true,"outputFile":"Application-release.apk","fullName":"release","baseName":"release"},"path":"AndroidManifest.xml","properties":{"packageId":"com.cyberpunktech.RobotController.app","split":"","minSdkVersion":"18"}}]

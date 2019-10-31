@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Google Drive\\AndroidStudioProjects\\RobotController\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "C:\\Users\\viktor.vano\\Documents\\GitHub\\NeuroBot\\Android Studio\\RobotController\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\vikto\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-28.0.0.aar\\982721a5747d50d83d22e1ccd303ab90\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\viktor.vano\\.gradle\\caches\\transforms-2\\files-2.1\\d280ec5d1eac08885b834bf6ffaad6a0\\cardview-v7-28.0.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\vikto\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e63faa93af2e27dfd85a916ddaaea2b3\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\viktor.vano\\.gradle\\caches\\transforms-2\\files-2.1\\8516ac599c0f39cda6e75249f41fc5c3\\appcompat-v7-28.0.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

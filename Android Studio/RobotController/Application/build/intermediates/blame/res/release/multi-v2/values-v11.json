@@ -1,16 +1,16 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Google Drive\\AndroidStudioProjects\\RobotController\\Application\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v11\\values-v11.xml",
+            "outputFile": "C:\\Users\\viktor.vano\\Documents\\GitHub\\NeuroBot\\Android Studio\\RobotController\\Application\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v11\\values-v11.xml",
             "map": [
                 {
-                    "source": "D:\\Google Drive\\AndroidStudioProjects\\RobotController\\Application\\src\\main\\res\\values-v11\\template-styles.xml",
+                    "source": "C:\\Users\\viktor.vano\\Documents\\GitHub\\NeuroBot\\Android Studio\\RobotController\\Application\\src\\main\\res\\values-v11\\template-styles.xml",
                     "from": {
                         "startLines": "19",
                         "startColumns": "4",
-                        "startOffsets": "650",
+                        "startOffsets": "669",
                         "endColumns": "65",
-                        "endOffsets": "711"
+                        "endOffsets": "730"
                     },
                     "to": {
                         "startLines": "2",

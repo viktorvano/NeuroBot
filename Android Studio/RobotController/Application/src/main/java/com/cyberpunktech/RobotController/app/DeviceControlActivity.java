@@ -145,7 +145,7 @@ public class DeviceControlActivity extends Activity  implements SensorEventListe
 
         Activity activityX = this;
         sensorManager = (SensorManager) activityX.getSystemService(Context.SENSOR_SERVICE);
-        if((accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)) == null)
+        if((accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_GRAVITY)) == null)
         {
             DeviceControlActivity activity = this;
             Toast.makeText(activity, "Accelerometer is not available", Toast.LENGTH_LONG).show();
@@ -159,7 +159,7 @@ public class DeviceControlActivity extends Activity  implements SensorEventListe
     @Override
     public void onSensorChanged(SensorEvent event)
     {
-        if(event.sensor.getType() == Sensor.TYPE_ACCELEROMETER)
+        if(event.sensor.getType() == Sensor.TYPE_GRAVITY)
         {
             long actualTime = System.currentTimeMillis();
             if(actualTime - lastUpdate > PERIOD)

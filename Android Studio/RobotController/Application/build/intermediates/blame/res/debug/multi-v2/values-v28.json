@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Google Drive\\AndroidStudioProjects\\RobotController\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v28\\values-v28.xml",
+            "outputFile": "C:\\Users\\viktor.vano\\Documents\\GitHub\\NeuroBot\\Android Studio\\RobotController\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v28\\values-v28.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\vikto\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e63faa93af2e27dfd85a916ddaaea2b3\\res\\values-v28\\values-v28.xml",
+                    "source": "C:\\Users\\viktor.vano\\.gradle\\caches\\transforms-2\\files-2.1\\8516ac599c0f39cda6e75249f41fc5c3\\appcompat-v7-28.0.0\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",

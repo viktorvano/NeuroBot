@@ -1,0 +1,107 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3 Copyright 2013 The Android Open Source Project
+4
+5 Licensed under the Apache License, Version 2.0 (the "License");
+6 you may not use this file except in compliance with the License.
+7 You may obtain a copy of the License at
+8
+9     http://www.apache.org/licenses/LICENSE-2.0
+10
+11 Unless required by applicable law or agreed to in writing, software
+12 distributed under the License is distributed on an "AS IS" BASIS,
+13 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14 See the License for the specific language governing permissions and
+15 limitations under the License.
+16-->
+17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+18    package="com.cyberpunktech.RobotController.app"
+19    android:versionCode="7"
+20    android:versionName="1.6" >
+21
+22    <uses-sdk
+23        android:minSdkVersion="18"
+23-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml
+24        android:targetSdkVersion="28" />
+24-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml
+25
+26    <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
+27
+28
+29    <!--
+30    Declare this required feature if you want to make the app available to BLE-capable
+31    devices only.  If you want to make your app available to devices that don't support BLE,
+32    you should omit this in the manifest.  Instead, determine BLE capability by using
+33    PackageManager.hasSystemFeature(FEATURE_BLUETOOTH_LE)
+34    -->
+35    <uses-feature
+35-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:31:5-89
+36        android:name="android.hardware.bluetooth_le"
+36-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:31:19-63
+37        android:required="true" />
+37-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:31:64-87
+38
+39    <uses-permission android:name="android.permission.BLUETOOTH" />
+39-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:33:5-67
+39-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:33:22-65
+40    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+40-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:34:5-73
+40-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:34:22-71
+41    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+41-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:35:5-81
+41-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:35:22-78
+42    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+42-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:36:5-79
+42-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:36:22-76
+43
+44    <application
+44-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:40:5-56:19
+45        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+45-->[com.android.support:support-compat:28.0.0] C:\Users\viktor.vano\.gradle\caches\transforms-2\files-2.1\ccf94a4f227dfa4f17156620e28a8b98\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+46        android:debuggable="true"
+47        android:icon="@drawable/ic_launcher"
+47-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:41:9-45
+48        android:label="Robot Controller"
+48-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:40:18-50
+49        android:testOnly="true"
+50        android:theme="@android:style/Theme.Holo.Light" >
+50-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:42:9-56
+51        <activity
+51-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:43:9-51:20
+52            android:name="com.cyberpunktech.RobotController.app.DeviceScanActivity"
+52-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:43:19-90
+53            android:configChanges="orientation"
+53-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:45:13-48
+54            android:label="Robot Controller"
+54-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:44:13-45
+55            android:screenOrientation="portrait" >
+55-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:46:13-49
+56            <intent-filter>
+56-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:47:13-50:29
+57                <action android:name="android.intent.action.MAIN" />
+57-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:48:17-68
+57-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:48:25-66
+58
+59                <category android:name="android.intent.category.LAUNCHER" />
+59-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:49:17-76
+59-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:49:27-74
+60            </intent-filter>
+61        </activity>
+62        <activity
+62-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:52:9-54:51
+63            android:name="com.cyberpunktech.RobotController.app.DeviceControlActivity"
+63-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:52:19-93
+64            android:configChanges="orientation"
+64-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:53:13-48
+65            android:screenOrientation="portrait" />
+65-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:54:13-49
+66
+67        <service
+67-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:55:9-114
+68            android:name="com.cyberpunktech.RobotController.app.BluetoothLeService"
+68-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:55:18-89
+69            android:enabled="true" />
+69-->C:\Users\viktor.vano\Documents\GitHub\NeuroBot\Android Studio\RobotController\Application\src\main\AndroidManifest.xml:55:90-112
+70    </application>
+71
+72</manifest>

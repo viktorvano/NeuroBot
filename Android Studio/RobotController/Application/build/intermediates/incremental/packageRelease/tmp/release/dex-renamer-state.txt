@@ -1,4 +1,4 @@
-#Wed Jan 30 17:08:12 CET 2019
-base.0=D\:\\Google Drive\\AndroidStudioProjects\\RobotController\\Application\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
+#Thu Oct 31 12:15:05 CET 2019
+base.0=C\:\\Users\\viktor.vano\\Documents\\GitHub\\NeuroBot\\Android Studio\\RobotController\\Application\\build\\intermediates\\dex\\release\\mergeDexRelease\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
